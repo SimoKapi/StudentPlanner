@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+    /* --color-theme1: #0894ff;
+    --color-theme2: #08efff;
+    --color-background1: #e3e3e3;
+    --color-background2: #b3b3b3;
+    --color-main-text: black;
+
+    --color-primary: #303030;
+    --color-primary-darker: #262626;
+    --color-secondary: #575757;
+    --color-light-text: white;
+    --color-feature: #b6b6b8; */
+
+    /* DARK */
+    --color-text: #EBE9FC;
+    --color-background: #1F1F24;
+    --color-background-shade: #242424;
+    --color-primary: #6031D8;
+    --color-secondary: #100e30;
+    --color-accent: #0600c2;
+
+    /* LIGHT */
+    /* --color-text: #040316;
+    --color-background: #dcdce0;
+    --color-primary: #5627CE;
+    --color-secondary: #d2d0f1;
+    --color-accent: #443dff; */
+
+    /* --color-text: #898c87; */
+    /* OTHER THEME DARK */
+    /* --color-text: #edf0eb;
+    --color-background: #131711;
+    --color-background-shade: #1d211b;
+    --color-primary: #aebea8;
+    --color-secondary: #504a63;
+    --color-accent: #a4859e; */
+
+    /* OTHER THEME LIGHT */
+    /* --color-text: #11140f;
+    --color-background: #eaeee8;
+    --color-primary: #485742;
+    --color-secondary: #a29cb4;
+    --color-accent: #7b5b75; */
+
+    --color-paper: #FFFFC5;
+    --color-paper-text: #040316;
+    --color-calendar: #2f2f36;
+    --color-calendar-shade: #2c2c33;
+    --color-calendar-selected: #232329;
+    --color-success: #2bff8b;
+    --color-text-dark: #121212;
+    --color-shade: rgba(0, 0, 0, 0.4);
+    --color-textbg: rgb(255, 0, 0);
+    --color-url: #0d89fc;
+}
+
+.btn {
+    border-radius: 5px;
+    /* padding: 15px 25px; */
+    cursor: pointer;
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}

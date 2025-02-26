@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "hand-scribble";
+    src: url('../fonts/honey_salt/honey_salt.otf');
+}
+
+.notebook {
+    position: relative;
+    padding-left:4rem;
+    background-image:
+        linear-gradient(to right, #ff5555 2px, transparent 2px),
+        repeating-linear-gradient(to bottom, transparent 0px, transparent 26px, black 27px);
+    background-position-x:3rem;
+    line-height: 1.5;
+    min-height:35rem;
+    padding-top:25px;
+    font-family: hand-scribble;
+    user-select: none;
+}
+
+.notebook > .notebook-holes {
+    position: absolute;
+    top:0;
+    left:10px;
+    height: 100%;
+    width:1rem;
+    display: grid;
+}
+
+.notebook > .notebook-holes > li {
+    /* background-color: rgb(228, 228, 228); */
+    background-color: var(--color-background);
+    border-radius: 100%;
+    margin: auto;
+    width:25px;
+    aspect-ratio: 1/1;
+    box-shadow: inset 3px 3px 5px black;
+}
+
+.taskElement:hover {
+    text-decoration: line-through;
+}
+
+.notebook > .totalScore {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.notebook > .totalScore > .scoreNumber {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: right;
+    font-size:50px;
+    font-weight:1000;
+    border-radius: 100%;
+    border: 5px dashed red;
+}
