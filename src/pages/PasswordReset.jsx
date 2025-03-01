@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router"
 
 function checkAccess(access) {
-    return true
+    return access == "ac"
 }
 
 function PasswordReset() {
@@ -30,7 +30,7 @@ function PasswordReset() {
                 <form className="w-3/5 mx-auto">
                     <label htmlFor="username">Email</label>
                     <input type="email" id="username" className=""/>
-                    <button className="btn bg-primary px-5 py-2 mx-auto block w-1/2">Request reset access</button>
+                    <button className="btn bg-primary px-5 py-2 mx-auto block w-1/2">Send</button>
                 </form>
             </div>
         </div>
