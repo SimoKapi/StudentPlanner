@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router'
+import { HashRouter, Route, Routes, Navigate } from 'react-router'
 import './index.css'
 import App from './App.jsx'
 
@@ -13,7 +13,7 @@ import PasswordReset from './pages/PasswordReset'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route index element={<Navigate to="./login" replace />} />
                 <Route path="app" element={<App />}>
@@ -26,6 +26,6 @@ createRoot(document.getElementById('root')).render(
                 <Route path="register" element={<Register />} />
                 <Route path="password-reset" element={<PasswordReset />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </StrictMode>
 )

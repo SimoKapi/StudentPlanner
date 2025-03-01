@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged, getAdditionalUserInfo, reload } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged, getAdditionalUserInfo, reload, sendPasswordResetEmail } from 'firebase/auth';
 import { auth, db } from "../firebase"
 import { doc, getDocs, getDoc, setDoc, collection, addDoc, updateDoc } from 'firebase/firestore';
 import taskManager from './taskManager';
@@ -6,7 +6,7 @@ import taskManager from './taskManager';
 class Authenticator {
     constructor() {
         onAuthStateChanged(auth, (user) => {
-            this.tasksCollection = collection(db, `users/${user.uid}/tasks`)
+            if (user) this.tasksCollection = collection(db, `users/${user.uid}/tasks`)
         })
     }
 
@@ -104,6 +104,10 @@ class Authenticator {
                 return doc.data()
             })
         })
+    }
+
+    resetPassword(email, error, success) {
+        sendPasswordResetEmail(auth, email).then(() => success()).catch((errorResponse) => error(errorResponse.message))
     }
 
     getLoginStatus(callback = null) {

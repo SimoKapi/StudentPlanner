@@ -1,12 +1,12 @@
 {
   "name": "studentplanner",
   "private": true,
-  "homepage": "https://SimoKapi.github.io/studyplan.it",
+  "homepage": "https://SimoKapi.github.io/StudentPlanner",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
